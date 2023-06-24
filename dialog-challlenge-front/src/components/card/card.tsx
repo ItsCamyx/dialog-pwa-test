@@ -11,6 +11,7 @@ interface CardProps {
   user: IPerson;
 }
 
+
 const verifyColor = (color: string) => {
   switch (color) {
     case 'blue':
