@@ -1,6 +1,6 @@
 import { IPerson } from '../interface/user';
 
-export const user: IPerson[] = [
+export const users: IPerson[] = [
   {
     _id: '5f1d7f3e5dc58af42fc39242',
     index: 0,

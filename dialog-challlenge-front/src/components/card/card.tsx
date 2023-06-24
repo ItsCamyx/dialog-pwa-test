@@ -1,4 +1,5 @@
-import { IPerson } from '../../interface/user';
+import { useNavigate } from 'react-router-dom';
+import { IFriend, IPerson } from '../../interface/user';
 import {
   CardContainer,
   CardImage,
@@ -7,35 +8,40 @@ import {
   ContainerDetails,
 } from './cardStyle';
 
-interface CardProps {
-  user: IPerson;
+interface ICardProps {
+  user: IPerson | IFriend;
 }
 
+export const Card = ({ user }: ICardProps) => {
+  const navigate = useNavigate();
 
-const verifyColor = (color: string) => {
-  switch (color) {
-    case 'blue':
-      return 'Azul';
-    case 'green':
-      return 'Verde';
-    case 'brown':
-      return 'Castanho';
-    default:
-      return color;
-  }
-};
-const verifyAge = (age: number) => {
-  if (age > 1) {
-    return `${age} anos`;
-  } else {
-    return `${age} ano`;
-  }
-};
+  const verifyColor = (color: string) => {
+    switch (color) {
+      case 'blue':
+        return 'Azul';
+      case 'green':
+        return 'Verde';
+      case 'brown':
+        return 'Castanho';
+      default:
+        return color;
+    }
+  };
+  const verifyAge = (age: number) => {
+    if (age > 1) {
+      return `${age} anos`;
+    } else {
+      return `${age} ano`;
+    }
+  };
 
-export const Card = ({ user }: CardProps) => {
+  const handleClick = () => {
+    navigate('/userDetails');
+  };
+
   return (
     <>
-      <CardContainer>
+      <CardContainer onClick={handleClick}>
         <div>
           <CardImage src={user.picture}></CardImage>
         </div>
