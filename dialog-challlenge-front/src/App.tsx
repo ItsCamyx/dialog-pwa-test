@@ -1,10 +1,13 @@
-import { MainPage } from './pages/mainPage/mainPage';
+import { ApolloProvider } from '@apollo/client';
+import ApolloSetup from '../src/config/apolloSetup';
 import { Routes } from './routes/routes';
 
 export const App = () => {
   return (
     <>
-      <Routes />
+      <ApolloProvider client={ApolloSetup}>
+        <Routes />
+      </ApolloProvider>
     </>
   );
 };
