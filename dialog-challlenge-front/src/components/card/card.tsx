@@ -36,7 +36,7 @@ export const Card = ({ user }: ICardProps) => {
   };
 
   const handleClick = () => {
-    navigate('/userDetails');
+    navigate(`/${user._id}`);
   };
 
   return (
