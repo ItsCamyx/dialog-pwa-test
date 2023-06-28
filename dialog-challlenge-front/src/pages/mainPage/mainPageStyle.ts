@@ -20,3 +20,9 @@ export const ContainerCard = styled.div`
   flex-wrap: wrap;
   grid-gap: 32px;
 `;
+
+export const LoadingText = styled.div`
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: bold;
+`;
