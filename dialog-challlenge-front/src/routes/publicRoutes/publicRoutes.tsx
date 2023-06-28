@@ -7,7 +7,8 @@ export const PublicRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/*' element={<UserDetails />} />
+        <Route path=':_id' element={<UserDetails />} />
+        <Route path='/*' element={<MainPage />} />
       </Routes>
     </BrowserRouter>
   );
