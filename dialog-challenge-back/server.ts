@@ -5,7 +5,7 @@ import { resolvers } from "./resolvers/resolvers";
 import { loggingMiddleware } from "./middlewares/loggingMiddleware";
 
 const startServer = async () => {
-  const server = new ApolloServer({ typeDefs, resolvers });
+  const server = new ApolloServer({ typeDefs, resolvers, debug: true });
 
   const app = express();
 
