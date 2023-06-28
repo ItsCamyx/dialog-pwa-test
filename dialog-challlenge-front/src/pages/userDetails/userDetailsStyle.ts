@@ -31,3 +31,29 @@ export const TitleContainerCard = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const LoadingText = styled.div`
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+`;
+
+export const ContainerButton = styled.div`
+  width: 127px;
+  height: 52px;
+  color: #016fb9;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid #016fb9;
+  }
+`;
